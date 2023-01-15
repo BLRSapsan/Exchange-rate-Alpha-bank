@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Альфа-банк. Курс валют</string>
+    <string name="rate_national_bank">Курс нацбанка</string>
+    <string name="rate_alpha">Курс Альфа-банка</string>
+    <string name="buy">Покупка</string>
+    <string name="sale">Продажа</string>
+    <string name="currency">Валютная пара</string>
+    <string name="splash">splash</string>
+</resources>
