@@ -1,3 +1,5 @@
 package com.exchangeratealphabank.models.NationalBank
 
-data class DataNational (val rate:List<BodyDataNational>)
+import com.google.gson.annotations.SerializedName
+
+data class DataNational (@SerializedName("rates")val rate:List<BodyDataNational>)
