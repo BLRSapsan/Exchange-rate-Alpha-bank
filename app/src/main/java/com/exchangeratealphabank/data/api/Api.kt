@@ -1,14 +1,17 @@
 package com.exchangeratealphabank.data.api
 
+import android.util.Log
+import com.exchangeratealphabank.data.repository.ratesAlphaBank
+import com.exchangeratealphabank.data.repository.ratesNationalBank
 import com.exchangeratealphabank.models.AlphaBank.DataAlpha
 import com.exchangeratealphabank.models.NationalBank.DataNational
-import retrofit2.Response
+import com.exchangeratealphabank.presentation.TAGExchangeRate
 import retrofit2.http.GET
 
 interface Api {
-    @GET("partner/1.0.1/public/rates")
-    suspend fun getAlpha(): Response<DataAlpha>
+    @GET(ratesAlphaBank)
+    suspend fun getAlpha(): DataAlpha
 
-    @GET("partner/1.0.1/public/nationalRates?currencyCode=840,978")
-    suspend fun getNational(): Response<DataNational>
+    @GET(ratesNationalBank)
+    suspend fun getNational(): DataNational
 }

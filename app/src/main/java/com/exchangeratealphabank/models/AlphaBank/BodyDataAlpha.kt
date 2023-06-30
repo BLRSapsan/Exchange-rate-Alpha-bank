@@ -1,14 +1,16 @@
 package com.exchangeratealphabank.models.AlphaBank
 
-data class BodyDataAlpha (val buyCode: Int,
-                          val buyIso: String,
-                          val buyRate: Double,
-                          val date: String,
-                          val name: String,
-                          val quantity: Int,
-                          val sellCode: Int,
-                          val sellIso: String,
-                          val sellRate: Double)
+import com.google.gson.annotations.SerializedName
+
+data class BodyDataAlpha (@SerializedName("buyCode")val buyCode: Int,
+                          @SerializedName("buyIso")val buyIso: String,
+                          @SerializedName("buyRate") val buyRate: Double,
+                          @SerializedName("date")val date: String,
+                          @SerializedName("name")val name: String,
+                          @SerializedName("quantity")val quantity: Int,
+                          @SerializedName("sellCode")val sellCode: Int,
+                          @SerializedName("sellIso") val sellIso: String,
+                          @SerializedName("sellRate") val sellRate: Double)
 
 /*
 sellrate - курс покупки

@@ -10,7 +10,7 @@ import retrofit2.Response
 
 class SecondViewModel:ViewModel() {
     private var repository = Repository()
-    var nationalListLiveData: MutableLiveData<Response<DataNational>> = MutableLiveData()
+    var nationalListLiveData: MutableLiveData<DataNational> = MutableLiveData()
 
     fun getRateNational() {
         viewModelScope.launch {
