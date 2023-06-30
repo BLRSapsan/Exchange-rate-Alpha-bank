@@ -2,7 +2,6 @@ package com.exchangeratealphabank.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.viewpager2.widget.ViewPager2
 import com.exchangeratealphabank.R
 import com.google.android.material.tabs.TabLayoutMediator

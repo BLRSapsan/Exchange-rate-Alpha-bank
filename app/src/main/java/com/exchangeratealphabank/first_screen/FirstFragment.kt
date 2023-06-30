@@ -29,11 +29,10 @@ class FirstFragment:Fragment() {
         val viewModelFirst = ViewModelProvider(this)[FirstViewModel::class.java]
         val view = inflater.inflate(R.layout.fragment_first, container, false)
         val recyclerFragmentFirst = view.recycler_first
-        recyclerFragmentFirst.layoutManager= LinearLayoutManager(ctx)
         val adapterRecycler = FirstAdapterRecycler()
+        recyclerFragmentFirst.layoutManager= LinearLayoutManager(ctx)
         recyclerFragmentFirst.adapter = adapterRecycler
         viewModelFirst.getRateAlpha()
-        Log.i(TAGExchangeRate, "viewModelFirst.getRateAlpha()\n")
         //getRateAlpha получает данные, которые надо уложить в список
         //методом observe подписываемся на изменения
         viewModelFirst.alphaListLiveData.observe(viewLifecycleOwner) { listRate ->

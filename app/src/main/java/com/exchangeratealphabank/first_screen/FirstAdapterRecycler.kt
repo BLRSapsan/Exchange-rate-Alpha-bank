@@ -19,12 +19,10 @@ internal class FirstAdapterRecycler: RecyclerView.Adapter<FirstAdapterRecycler.V
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_view, parent, false)
-        Log.i(TAGExchangeRate, "онКреатеВью 1 фрагмент")
         return ViewHolder(view = view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.i(TAGExchangeRate, "байндВью 1 фрагмент")
         holder.itemView.currency_first.text = listDataAlpha[position].sellIso
         holder.itemView.currency_second.text = listDataAlpha[position].buyIso
         holder.itemView.rate_buy.text = listDataAlpha[position].sellRate.toString()
@@ -37,7 +35,7 @@ internal class FirstAdapterRecycler: RecyclerView.Adapter<FirstAdapterRecycler.V
 
     @SuppressLint("NotifyDataSetChanged")
     fun setListAlpha(setList: List<BodyDataAlpha>) {
-        Log.i(TAGExchangeRate, "setListAlpha: попытка к листу присоединить")
+        Log.i(TAGExchangeRate, "FirstAdapterRecycler: передача данных в setListAlpha")
         listDataAlpha = setList
         notifyDataSetChanged()
     }
