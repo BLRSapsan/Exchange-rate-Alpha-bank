@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="table_layout">#A8E681</color>
     <color name="cardviewbackgroud">#AD91BD75</color>
+    <color name="background_main_activity">#32FF0000</color>
 </resources>

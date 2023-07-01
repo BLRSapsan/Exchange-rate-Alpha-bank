@@ -21,7 +21,7 @@ class SecondAdapterRecycler: RecyclerView.Adapter<SecondAdapterRecycler.ViewHold
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.currency_first.text = listItem[position].iso
-        holder.itemView.buy.text = listItem[position].rate.toString()
+        holder.itemView.rate_buy.text = listItem[position].rate.toString()
     }
 
     override fun getItemCount(): Int {

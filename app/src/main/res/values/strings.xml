@@ -4,6 +4,7 @@
     <string name="rate_alpha">Курс Альфа-банка</string>
     <string name="buy">Покупка</string>
     <string name="sale">Продажа</string>
-    <string name="currency">Валютная пара</string>
-    <string name="splash">splash</string>
+    <string name="currency">Валюта</string>
+    <string name="repeat">Повторить</string>
+    <string name="no_connection">Нет подключения к сети</string>
 </resources>
