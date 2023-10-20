@@ -5,23 +5,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.exchangeratealphabank.R
+import com.exchangeratealphabank.databinding.ListViewBinding
 import com.exchangeratealphabank.models.NationalBank.BodyDataNational
-import kotlinx.android.synthetic.main.list_view.view.*
 
 class SecondAdapterRecycler: RecyclerView.Adapter<SecondAdapterRecycler.ViewHolder>() {
+
     private var listItem = emptyList<BodyDataNational>()
+    private lateinit var binding: ListViewBinding
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_view, parent, false)
-        return ViewHolder(view)
+        binding = ListViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding.root)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.currency_first.text = listItem[position].iso
-        holder.itemView.rate_buy.text = listItem[position].rate.toString()
+        binding.currencyFirst.text = listItem[position].iso
+        binding.rateBuy.text = listItem[position].rate.toString()
     }
 
     override fun getItemCount(): Int {
